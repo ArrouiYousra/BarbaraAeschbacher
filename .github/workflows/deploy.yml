@@ -1,10 +1,11 @@
-# Déploiement GitHub Pages — activer : Réglages → Pages → Source : GitHub Actions
+# Pages → Réglages : Source « GitHub Actions » (pas une branche gh-pages seule).
+# Si le job deploy échoue encore : Environnements → github-pages → retirer les « Required reviewers ».
 name: Deploy to GitHub Pages
 
+# Déploiement production uniquement depuis main (autres branches = travail / preview local).
 on:
   push:
     branches: [main]
-  workflow_dispatch:
 
 permissions:
   contents: read
@@ -21,11 +22,23 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Install, build, upload
-        uses: withastro/action@v2
-        # avec:
-        #   path: ./
-        #   node-version: 22
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
 
   deploy:
     needs: build
@@ -34,6 +47,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy
+      - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

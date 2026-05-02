@@ -1,18 +1,25 @@
+/* Inspiration éditoriale type site agence (rythme, titres forts) — palette et typo propres. */
 :root {
-  --color-bg: #f8f7f4;
+  --color-bg: #f5f3ef;
   --color-surface: #ffffff;
-  --color-text: #1c1b19;
-  --color-text-muted: #5c5a56;
-  --color-accent: #2c3e30;
-  --color-border: #e6e4df;
+  --color-text: #151916;
+  --color-text-muted: #5e5c57;
+  --color-accent: #2a3d32;
+  --color-accent-warm: #b8956c;
+  --color-hero-bg: #0e1210;
+  --color-hero-text: #e8e4dc;
+  --color-border: #e0ddd6;
   --font: "Source Serif 4", "Georgia", serif;
+  --font-display: "Syne", system-ui, sans-serif;
   --space-xs: 0.5rem;
   --space-sm: 1rem;
   --space-md: 1.5rem;
   --space-lg: 2.5rem;
   --space-xl: 4rem;
+  --space-2xl: 6rem;
   --max: 40rem;
-  --max-wide: 56rem;
+  --max-wide: 72rem;
+  --header-h: 4rem;
 }
 
 *,
@@ -37,26 +44,33 @@ body {
 }
 
 h1,
-h2,
+h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin: 0 0 var(--space-sm);
+}
+
 h3 {
-  font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
+  font-weight: 600;
+  line-height: 1.25;
   margin: 0 0 var(--space-sm);
 }
 
 h1 {
-  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-size: clamp(1.85rem, 4.5vw, 2.5rem);
 }
 
 h2 {
-  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  font-size: clamp(1.35rem, 2.8vw, 1.75rem);
   margin-top: var(--space-lg);
 }
 
 h3 {
   font-size: 1.1rem;
   margin-top: var(--space-md);
+  font-family: var(--font-display);
 }
 
 p {
@@ -103,8 +117,19 @@ main {
   padding: var(--space-lg) var(--space-md) var(--space-xl);
 }
 
+main:has(.page-home) {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
 .prose {
   max-width: var(--max);
+}
+
+.prose h1,
+.prose h2 {
+  font-family: var(--font-display);
 }
 
 .lead {
@@ -114,29 +139,295 @@ main {
 }
 
 .eyebrow {
-  font-size: 0.8rem;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.16em;
   color: var(--color-text-muted);
   margin-bottom: var(--space-sm);
 }
 
+/* ——— Header ——— */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid var(--color-border);
+  background: color-mix(in srgb, var(--color-surface) 92%, transparent);
+  backdrop-filter: blur(10px);
+}
+
+.site-header__inner {
+  max-width: var(--max-wide);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  height: var(--header-h);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.site-header__brand {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.site-header__brand:hover {
+  color: var(--color-accent);
+}
+
+.site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1.35rem;
+}
+
+.site-nav a {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-text-muted);
+  text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+  color: var(--color-text);
+}
+
+/* ——— Footer ——— */
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  background: var(--color-text);
+  color: color-mix(in srgb, var(--color-hero-text) 75%, transparent);
+  margin-top: auto;
+}
+
+.site-footer__inner {
+  max-width: var(--max-wide);
+  margin: 0 auto;
+  padding: 2.25rem 1.5rem;
+  font-size: 0.875rem;
+}
+
+.site-footer p {
+  margin: 0 0 0.5rem;
+}
+
+.site-footer p:last-child {
+  margin-bottom: 0;
+}
+
+/* ——— Home hero (pleine largeur) ——— */
+.hero {
+  background: var(--color-hero-bg);
+  color: var(--color-hero-text);
+  padding: clamp(3rem, 12vw, 7rem) 1.5rem clamp(4rem, 14vw, 8rem);
+}
+
+.hero__inner {
+  max-width: var(--max-wide);
+  margin: 0 auto;
+}
+
+.hero__kicker {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: color-mix(in srgb, var(--color-hero-text) 55%, transparent);
+  margin: 0 0 var(--space-md);
+}
+
+.hero__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2.15rem, 7vw, 3.75rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  margin: 0 0 var(--space-lg);
+}
+
+.hero__line {
+  display: block;
+}
+
+.hero__line--accent {
+  color: var(--color-accent-warm);
+}
+
+.hero__lead {
+  max-width: 32rem;
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color: color-mix(in srgb, var(--color-hero-text) 88%, transparent);
+  margin: 0 0 var(--space-lg);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  align-items: center;
+}
+
+/* ——— Sections home ——— */
+.section {
+  padding: clamp(3rem, 8vw, 5rem) 1.5rem;
+}
+
+.section__inner {
+  max-width: var(--max-wide);
+  margin: 0 auto;
+}
+
+.section--paper {
+  background: var(--color-surface);
+}
+
+.section__intro {
+  max-width: 38rem;
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+}
+
+.section__intro .lead {
+  margin-bottom: 0;
+}
+
+.section-heading {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.75rem, 3.5vw, 2.35rem);
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin: 0 0 var(--space-md);
+}
+
+.pillar-grid {
+  display: grid;
+  gap: var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .pillar-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.pillar-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  padding: var(--space-lg) var(--space-md);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.pillar-card:hover {
+  border-color: color-mix(in srgb, var(--color-accent-warm) 45%, var(--color-border));
+  box-shadow: 0 12px 40px rgba(20, 24, 20, 0.06);
+}
+
+.pillar-card h3 {
+  margin-top: 0;
+  font-size: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.pillar-card p {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0;
+}
+
+.cta-band {
+  background: color-mix(in srgb, var(--color-accent) 94%, #000);
+  color: var(--color-hero-text);
+  padding: clamp(2.5rem, 6vw, 4rem) 1.5rem;
+  text-align: center;
+}
+
+.cta-band__inner {
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
+.cta-band p {
+  margin: 0 0 var(--space-md);
+  opacity: 0.92;
+  font-size: 1.05rem;
+}
+
 .button {
   display: inline-block;
-  padding: 0.65em 1.25em;
-  font-family: var(--font);
-  font-size: 0.95rem;
+  padding: 0.7em 1.4em;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   color: var(--color-surface);
   background: var(--color-accent);
   border: 1px solid var(--color-accent);
   text-decoration: none;
   cursor: pointer;
-  transition: background 0.15s ease, color 0.15s ease;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .button:hover {
   background: var(--color-surface);
   color: var(--color-accent);
+}
+
+.hero .button {
+  background: var(--color-hero-text);
+  color: var(--color-hero-bg);
+  border-color: var(--color-hero-text);
+}
+
+.hero .button:hover {
+  background: transparent;
+  color: var(--color-hero-text);
+  border-color: var(--color-hero-text);
+}
+
+.hero .button--secondary {
+  background: transparent;
+  color: var(--color-hero-text);
+  border-color: color-mix(in srgb, var(--color-hero-text) 45%, transparent);
+}
+
+.hero .button--secondary:hover {
+  background: color-mix(in srgb, var(--color-hero-text) 12%, transparent);
+  color: var(--color-hero-text);
+  border-color: var(--color-hero-text);
+}
+
+.cta-band .button {
+  background: var(--color-accent-warm);
+  border-color: var(--color-accent-warm);
+  color: var(--color-hero-bg);
+}
+
+.cta-band .button:hover {
+  background: transparent;
+  color: var(--color-hero-text);
+  border-color: var(--color-hero-text);
 }
 
 .button--secondary {
@@ -187,6 +478,10 @@ form textarea {
 form textarea {
   min-height: 8rem;
   resize: vertical;
+}
+
+form button.button {
+  border: none;
 }
 
 .form-note {
