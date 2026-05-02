@@ -1,0 +1,33 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { siteBase } from "../lib/base";
+
+const base = siteBase();
+---
+
+<Layout
+  title="Structuration & communication pour dirigeants"
+  description="Accompagnement sur mesure pour libérer du temps et développer votre activité — TPE et PME."
+>
+  <article class="prose">
+    <p class="eyebrow">Conseil — TPE & PME</p>
+    <h1>Structuration et communication pour libérer votre temps</h1>
+    <p class="lead">
+      J’accompagne les chefs d’entreprise dans la structuration de leur entreprise et leur
+      communication, avec une offre hybride sur mesure — du conseil à la réalisation.
+    </p>
+    <p>
+      Mon objectif : vous faire gagner du temps sur les tâches chronophages à faible valeur
+      ajoutée (administratif, RH, comptabilité, etc.) et renforcer votre communication pour
+      développer votre business.
+    </p>
+    <p><strong>Pour qui :</strong> dirigeants de TPE/PME qui ne peuvent pas internaliser ces
+      fonctions, et agences de communication en recherche d’un freelance en marque blanche.
+    </p>
+    <p style="margin-top: var(--space-lg);">
+      <a class="button" href={`${base}offre/`}>Voir l’offre</a>
+      <a class="button button--secondary" href={`${base}contact/`} style="margin-left: 0.75rem;"
+        >Contact</a>
+    </p>
+  </article>
+</Layout>
