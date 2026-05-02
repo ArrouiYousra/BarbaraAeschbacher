@@ -9,25 +9,65 @@ const base = siteBase();
   title="Structuration & communication pour dirigeants"
   description="Accompagnement sur mesure pour libérer du temps et développer votre activité — TPE et PME."
 >
-  <article class="prose">
-    <p class="eyebrow">Conseil — TPE & PME</p>
-    <h1>Structuration et communication pour libérer votre temps</h1>
-    <p class="lead">
-      J’accompagne les chefs d’entreprise dans la structuration de leur entreprise et leur
-      communication, avec une offre hybride sur mesure — du conseil à la réalisation.
-    </p>
-    <p>
-      Mon objectif : vous faire gagner du temps sur les tâches chronophages à faible valeur
-      ajoutée (administratif, RH, comptabilité, etc.) et renforcer votre communication pour
-      développer votre business.
-    </p>
-    <p><strong>Pour qui :</strong> dirigeants de TPE/PME qui ne peuvent pas internaliser ces
-      fonctions, et agences de communication en recherche d’un freelance en marque blanche.
-    </p>
-    <p style="margin-top: var(--space-lg);">
-      <a class="button" href={`${base}offre/`}>Voir l’offre</a>
-      <a class="button button--secondary" href={`${base}contact/`} style="margin-left: 0.75rem;"
-        >Contact</a>
-    </p>
-  </article>
+  <div class="page-home">
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero__inner">
+        <p class="hero__kicker">Conseil · TPE & PME</p>
+        <h1 id="hero-heading" class="hero__title">
+          <span class="hero__line">Structurer,</span>
+          <span class="hero__line">communiquer,</span>
+          <span class="hero__line hero__line--accent">libérer du temps.</span>
+        </h1>
+        <p class="hero__lead">
+          Accompagnement sur mesure pour les dirigeants : organisation, communication et missions
+          externalisées — pour investir votre énergie là où elle crée le plus de valeur.
+        </p>
+        <div class="hero__actions">
+          <a class="button" href={`${base}offre/`}>Découvrir l’offre</a>
+          <a class="button button--secondary" href={`${base}contact/`}>Écrire</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--paper" aria-labelledby="intro-heading">
+      <div class="section__inner">
+        <div class="section__intro">
+          <h2 id="intro-heading" class="section-heading">Une approche hybride, alignée sur votre rythme</h2>
+          <p class="lead">
+            Je m’adresse aux chefs d’entreprise qui ne peuvent pas tout internaliser, et aux agences
+            en recherche d’un binôme structuration / communication en marque blanche.
+          </p>
+        </div>
+        <div class="pillar-grid">
+          <article class="pillar-card">
+            <h3>Structuration</h3>
+            <p>
+              Processus, cadre administratif et coordination : clarifier le fonctionnement pour
+              décider plus vite.
+            </p>
+          </article>
+          <article class="pillar-card">
+            <h3>Communication</h3>
+            <p>
+              Messages et supports cohérents avec vos objectifs business, sans alourdir vos équipes.
+            </p>
+          </article>
+          <article class="pillar-card">
+            <h3>Temps retrouvé</h3>
+            <p>
+              Moins de paperasse chronophage, plus de disponibilité pour développer votre activité.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band" aria-labelledby="cta-heading">
+      <div class="cta-band__inner">
+        <h2 id="cta-heading" class="sr-only">Échangeons sur votre besoin</h2>
+        <p>Première rencontre pour cadrer votre besoin, puis audit et plan d’actions sur mesure.</p>
+        <a class="button" href={`${base}methode/`}>Voir la méthode</a>
+      </div>
+    </section>
+  </div>
 </Layout>
