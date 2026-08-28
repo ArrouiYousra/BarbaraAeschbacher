@@ -1,14 +1,83 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { siteBase } from "../lib/base";
+
+const base = siteBase();
 ---
 
+<!--
+  NOTE CONTENU : le texte biographique ci-dessous reprend les éléments fournis
+  par la cliente (8+ ans en agence de communication spécialisée finance,
+  marque blanche). À faire valider / compléter par Barbara avant mise en ligne.
+-->
 <Layout
   title="À propos"
-  description="Parcours Sorbonne, agences de communication, HEC Paris — expertise structuration et communication."
+  description="Barbara Aeschbacher — consultante en structuration et communication stratégique pour dirigeants de TPE/PME et agences."
 >
-  <article class="prose">
-    <p class="eyebrow">Page en construction</p>
-    <h1>À propos</h1>
-    <p class="lead">En cours de rédaction.</p>
-  </article>
+  <section class="band band--beige">
+    <div class="band__inner page-head">
+      <p class="eyebrow">À propos</p>
+      <h1>Barbara Aeschbacher</h1>
+      <p class="lead">
+        Consultante en structuration et communication stratégique. J’accompagne
+        les dirigeants de TPE/PME et les agences de communication pour piloter
+        leur activité et sécuriser leurs décisions.
+      </p>
+    </div>
+  </section>
+
+  <section class="band band--beige-soft">
+    <div class="band__inner marker">
+      <img
+        class="marker__icon"
+        src={`${base}webassets/brand/sigle-03.png`}
+        alt=""
+        width="180"
+        height="180"
+      />
+      <div class="marker__body">
+        <h2>Parcours</h2>
+        <p>
+          Plus de huit ans d’expérience en agence de communication, avec une
+          spécialisation dans le secteur de la finance : relations presse,
+          pilotage de projets et coordination d’équipes.
+        </p>
+        <p>
+          Aujourd’hui indépendante, j’interviens auprès des dirigeants comme un
+          bras droit externalisé, et auprès des agences en marque blanche pour
+          renforcer leurs équipes sur des projets exigeants.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band--grey">
+    <div class="band__inner">
+      <p class="eyebrow">Convictions</p>
+      <h2>Ce qui guide mon travail</h2>
+      <div class="offer-cols">
+        <div>
+          <ul class="ticks">
+            <li>Apporter de la clarté avant d’ajouter des outils.</li>
+            <li>Structurer l’existant plutôt que tout reconstruire.</li>
+          </ul>
+        </div>
+        <div>
+          <ul class="ticks">
+            <li>Coordonner les actions autour d’un interlocuteur unique.</li>
+            <li>Sécuriser les décisions par des recommandations concrètes.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band--navy band--compact">
+    <div class="band__inner" style="text-align:center">
+      <h2>Envie d’échanger ?</h2>
+      <p style="margin-top:1.5rem">
+        <a class="button" href={`${base}contact/`}>Me contacter</a>
+      </p>
+    </div>
+  </section>
 </Layout>

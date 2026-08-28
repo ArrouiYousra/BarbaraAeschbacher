@@ -1,14 +1,85 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { siteBase } from "../lib/base";
+
+const base = siteBase();
 ---
 
 <Layout
   title="Méthode"
-  description="Audit, plan d’action et suivi : une collaboration de confiance, intégrée à votre équipe."
+  description="Une approche hybride : vision stratégique pour décider, implication opérationnelle pour faire avancer."
 >
-  <article class="prose">
-    <p class="eyebrow">Page en construction</p>
-    <h1>Méthode</h1>
-    <p class="lead">En cours de rédaction.</p>
-  </article>
+  <section class="band band--beige">
+    <div class="band__inner page-head">
+      <p class="eyebrow">Méthode</p>
+      <h1>Une approche hybride.</h1>
+      <p class="lead">
+        Ni uniquement stratégique, ni uniquement opérationnelle. Les deux, en
+        permanence — parce qu’une stratégie n’a de valeur que si elle est
+        appliquée.
+      </p>
+    </div>
+  </section>
+
+  <section class="band band--beige-soft">
+    <div class="band__inner marker">
+      <img
+        class="marker__icon"
+        src={`${base}webassets/icons/Pictogrammes-accueil-02.png`}
+        alt=""
+        width="190"
+        height="160"
+      />
+      <div class="marker__body">
+        <h2>Deux niveaux d’intervention</h2>
+        <ul class="bullets--tan">
+          <li>
+            <strong>Une vision stratégique</strong> pour structurer, prioriser et
+            décider.
+          </li>
+          <li>
+            <strong>Une implication opérationnelle</strong> pour coordonner les
+            actions et faire avancer concrètement.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band--grey">
+    <div class="band__inner">
+      <p class="eyebrow">Déroulé</p>
+      <h2>Comment se déroule une collaboration</h2>
+      <div class="offer-detail">
+        <h3>1. Diagnostic</h3>
+        <p class="offer-detail__intro">
+          État des lieux de l’organisation, de la communication et des projets en
+          cours. Identification des points de blocage et des tâches chronophages.
+        </p>
+      </div>
+      <div class="offer-detail">
+        <h3>2. Feuille de route</h3>
+        <p class="offer-detail__intro">
+          Priorisation des chantiers et plan d’actions clair sur 3 à 6 mois, avec
+          des objectifs concrets.
+        </p>
+      </div>
+      <div class="offer-detail">
+        <h3>3. Accompagnement</h3>
+        <p class="offer-detail__intro">
+          Pilotage dans la durée : coordination, suivi, ajustements. Un
+          interlocuteur unique, intégré à votre fonctionnement.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band--navy band--compact">
+    <div class="band__inner" style="text-align:center">
+      <h2>Structurer pour avancer. Décider pour développer. Respirer pour durer.</h2>
+      <p style="margin-top:1.5rem">
+        <a class="button" href={`${base}contact/`}>Prendre contact</a>
+      </p>
+    </div>
+  </section>
 </Layout>

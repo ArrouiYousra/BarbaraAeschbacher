@@ -1,7 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-/** Remplacez par votre lien Formspree (https://formspree.io) ou autre endpoint — GitHub Pages ne traite pas les formulaires seul. */
+/** Remplacez par votre lien Formspree (https://formspree.io) ou autre endpoint —
+ *  GitHub Pages ne traite pas les formulaires seul. */
 const FORMSPREE_ACTION = "https://formspree.io/f/REMPLACER";
 
 /** Numéro international sans espaces, ex. 33612345678 — lien wa.me */
@@ -11,34 +12,51 @@ const whatsappHref = `https://wa.me/${WHATSAPP_E164}`;
 
 <Layout
   title="Contact"
-  description="Formulaire de contact et WhatsApp — réponse sous devis, sans affichage de tarifs en ligne."
+  description="Formulaire de contact et WhatsApp — chaque mission est cadrée individuellement."
 >
-  <article class="prose">
-    <p class="eyebrow">Écrire</p>
-    <h1>Contact</h1>
-    <p class="lead">
-      Décrivez votre contexte et votre besoin : je reviens vers vous pour un échange et, le cas
-      échéant, un devis. Aucun tarif public : chaque mission est cadrée individuellement.
-    </p>
+  <section class="band band--beige">
+    <div class="band__inner page-head">
+      <p class="eyebrow">Contact</p>
+      <h1>Discutons de votre projet.</h1>
+      <p class="lead">
+        Décrivez votre contexte et votre besoin : je reviens vers vous pour un
+        échange et, le cas échéant, une proposition d’accompagnement. Chaque
+        mission est cadrée individuellement.
+      </p>
+    </div>
+  </section>
 
-    <p>
-      <a class="button" href={whatsappHref} rel="noopener noreferrer" target="_blank"
-        >WhatsApp</a>
-    </p>
+  <section class="band band--beige-soft">
+    <div class="band__inner contact-grid">
+      <div>
+        <h2>Par message direct</h2>
+        <p>Pour un premier contact rapide :</p>
+        <p>
+          <a class="button button--ghost" href={whatsappHref} rel="noopener noreferrer" target="_blank">
+            WhatsApp
+          </a>
+        </p>
+      </div>
+      <form action={FORMSPREE_ACTION} method="post">
+        <label for="prenom">Prénom *</label>
+        <input id="prenom" name="prenom" type="text" required autocomplete="given-name" />
 
-    <h2>Formulaire</h2>
-    <form action={FORMSPREE_ACTION} method="post">
-      <label for="name">Nom</label>
-      <input id="name" name="name" type="text" required autocomplete="name" />
+        <label for="nom">Nom *</label>
+        <input id="nom" name="nom" type="text" required autocomplete="family-name" />
 
-      <label for="email">E-mail</label>
-      <input id="email" name="email" type="email" required autocomplete="email" />
+        <label for="email">Courriel *</label>
+        <input id="email" name="email" type="email" required autocomplete="email" />
 
-      <label for="message">Message</label>
-      <textarea id="message" name="message" required></textarea>
+        <label for="societe">Société</label>
+        <input id="societe" name="societe" type="text" autocomplete="organization" />
 
-      <input type="hidden" name="_subject" value="Message — Aeschbacher Conseil" />
-      <button type="submit" class="button">Envoyer</button>
-    </form>
-  </article>
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <input type="hidden" name="_subject" value="Contact — Aeschbacher Conseil" />
+        <button type="submit" class="button">Envoyer</button>
+        <p class="form-note">Réponse sous quelques jours ouvrés.</p>
+      </form>
+    </div>
+  </section>
 </Layout>

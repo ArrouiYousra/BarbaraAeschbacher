@@ -10,7 +10,7 @@ const path =
     : Astro.url.pathname.replace(/\/+$/, "");
 
 const isHome = basePath === "" ? path === "/" : path === basePath;
-const sigleSrc = `${baseUrl}webassets/brand/sigle-04.png`;
+const sigleSrc = `${baseUrl}webassets/brand/sigle-01.png`;
 
 function sectionActive(segment: string): boolean {
   const prefix =
@@ -38,8 +38,8 @@ const links = [
 <header class="site-header">
   <div class="site-header__inner">
     <a class="site-header__brand" href={baseUrl}>
-      <img src={sigleSrc} alt="" width="28" height="28" />
-      <span>Aeschbacher Conseil</span>
+      <img src={sigleSrc} alt="" width="30" height="30" />
+      <b>Aeschbacher</b>&nbsp;<span>Conseil</span>
     </a>
     <nav class="site-nav" aria-label="Navigation principale">
       <ul>
