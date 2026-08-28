@@ -1,14 +1,116 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { siteBase } from "../lib/base";
+
+const base = siteBase();
 ---
 
 <Layout
   title="Offre"
-  description="Services de structuration, administration et communication pour entreprises et agences."
+  description="Trois formats d’accompagnement : audit & diagnostic, accompagnement mensuel, missions ponctuelles."
 >
-  <article class="prose">
-    <p class="eyebrow">Page en construction</p>
-    <h1>Offre</h1>
-    <p class="lead">En cours de rédaction.</p>
-  </article>
+  <section class="band band--beige">
+    <div class="band__inner page-head">
+      <p class="eyebrow">Offre</p>
+      <h1>Un accompagnement adapté à votre niveau de maturité.</h1>
+      <p class="lead">
+        Trois formats, une même exigence : apporter de la clarté, structurer
+        l’existant et sécuriser vos décisions. Chaque mission est cadrée
+        individuellement.
+      </p>
+    </div>
+  </section>
+
+  <section class="band band--grey">
+    <div class="band__inner">
+      <!-- AUDIT -->
+      <article id="audit" class="offer-detail">
+        <h3>Audit &amp; diagnostic.</h3>
+        <p class="offer-detail__tag">Prendre du recul et structurer vos priorités</p>
+        <p class="offer-detail__intro">
+          Un temps d’analyse pour faire un état des lieux de votre organisation,
+          de votre communication et de vos projets en cours.
+        </p>
+        <div class="offer-cols">
+          <div>
+            <h4>Objectifs</h4>
+            <ul class="ticks">
+              <li>Clarifier votre situation actuelle</li>
+              <li>Identifier les points de blocage</li>
+              <li>Prioriser vos actions</li>
+              <li>Définir une feuille de route claire</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Livrables</h4>
+            <ul class="ticks">
+              <li>Diagnostic structuré</li>
+              <li>Recommandations concrètes</li>
+              <li>Plan d’actions priorisé</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- ACCOMPAGNEMENT -->
+      <article id="accompagnement" class="offer-detail">
+        <h3>Accompagnement mensuel.</h3>
+        <p class="offer-detail__tag">Structurer, piloter, avancer</p>
+        <p class="offer-detail__intro">
+          Un accompagnement dans le temps pour vous aider à organiser votre
+          activité, piloter vos projets et sécuriser vos décisions.
+        </p>
+        <div class="offer-cols">
+          <div>
+            <h4>Interventions possibles</h4>
+            <ul class="ticks">
+              <li>Structuration de l’organisation</li>
+              <li>Pilotage de projets</li>
+              <li>Coordination des prestataires</li>
+              <li>Développement d’actions de communication</li>
+              <li>Support administratif structurant</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Modalités</h4>
+            <ul class="ticks">
+              <li>Forfait mensuel (nombre de jours défini ensemble)</li>
+              <li>Vision long terme</li>
+              <li>Relation de confiance et de proximité</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- MISSIONS -->
+      <article id="missions" class="offer-detail">
+        <h3>Missions ponctuelles.</h3>
+        <p class="offer-detail__tag">Répondre à un besoin spécifique</p>
+        <p class="offer-detail__intro">
+          Une intervention ciblée sur un enjeu précis, avec un cadrage clair et
+          une exécution maîtrisée.
+        </p>
+        <div class="offer-cols">
+          <div>
+            <h4>Interventions possibles</h4>
+            <ul class="ticks">
+              <li>Lancement de projet</li>
+              <li>Mise en place d’une stratégie de communication</li>
+              <li>Pilotage temporaire</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="band band--navy band--compact">
+    <div class="band__inner" style="text-align:center">
+      <h2>Un doute sur le format le plus adapté ?</h2>
+      <p>Échangeons sur votre contexte pour définir ensemble le bon point d’entrée.</p>
+      <p style="margin-top:1.5rem">
+        <a class="button" href={`${base}contact/`}>Discutons de votre projet</a>
+      </p>
+    </div>
+  </section>
 </Layout>

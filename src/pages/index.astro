@@ -6,186 +6,193 @@ const base = siteBase();
 ---
 
 <Layout
-  title="Structuration & communication pour dirigeants"
-  description="Accompagnement sur mesure pour libérer du temps et développer votre activité — TPE et PME."
+  title="Aeschbacher Conseil — Moins d’opérationnel, plus de pilotage"
+  description="Accompagnement stratégique et opérationnel des dirigeants de TPE/PME et agences de communication : structurer, piloter, avancer."
 >
-  <div class="home-canva">
-    <section class="canva-hero" aria-labelledby="hero-heading">
-      <div class="canva-hero__inner">
-        <div class="canva-hero__content">
-          <h1 id="hero-heading" class="sr-only">
-            Moins d’opérationnel,
-            plus de pilotage.
-          </h1>
-          <p class="canva-block-text canva-block-text--lead">
-            Moins d’opérationnel,
-            <br />
-            plus de pilotage.
-          </p>
-          <p class="canva-block-text canva-block-text--sublead">
-            Optez pour un accompagnement structurant pour piloter votre activité, développer votre
-            notoriété et libérez-vous du temps.
-          </p>
-          <p class="canva-block-text canva-block-text--mid">
-            Accompagnement stratégique et opérationnel des dirigeants de TPE/PME et agences de
-            communication.
-          </p>
-          <p class="canva-block-text canva-block-text--maturity">
-            Un accompagnement adapté à votre niveau de maturité :
-          </p>
-          <ul class="canva-list canva-list--maturity">
-            <li>Audit & diagnostic</li>
-            <li>Accompagnement mensuel</li>
-            <li>Missions ponctuelles</li>
-          </ul>
-          <a class="button" href={`${base}contact/`}>En savoir plus</a>
-        </div>
-        <div class="canva-hero__visual" aria-hidden="true">
-          <div class="hero-blob">
-            <img src={`${base}webassets/brand/sigle-01.png`} alt="" />
-          </div>
+  <!-- ============ HERO ============ -->
+  <section class="band band--beige" aria-labelledby="hero-heading">
+    <div class="band__inner hero">
+      <div class="hero__content">
+        <p class="hero__wordmark">Aeschbacher <span>Conseil</span></p>
+        <h1 id="hero-heading" class="hero__title">
+          Moins d’opérationnel,<br />plus de pilotage.
+        </h1>
+        <p class="hero__sub">
+          Optez pour un accompagnement structurant pour piloter votre activité,
+          développer votre notoriété et libérez-vous du temps.
+        </p>
+        <p class="hero__text">
+          Accompagnement stratégique et opérationnel des dirigeants de TPE/PME
+          et agences de communication.
+        </p>
+        <p class="hero__maturity">Un accompagnement adapté à votre niveau de maturité :</p>
+        <ul class="hero__list">
+          <li>Audit &amp; diagnostic</li>
+          <li>Accompagnement mensuel</li>
+          <li>Missions ponctuelles</li>
+        </ul>
+        <a class="button" href={`${base}offre/`}>En savoir plus</a>
+      </div>
+      <div class="hero__visual" aria-hidden="true">
+        <div class="hero__blob">
+          <img src={`${base}webassets/brand/sigle-04.png`} alt="" />
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="canva-section canva-section--center" aria-labelledby="vision-heading">
-      <h2 id="vision-heading">Notre vision.</h2>
-      <p>
-        Le manque de temps n’est pas une fatalité. Il est souvent le symptôme d’une organisation qui
-        s’est complexifiée.
-      </p>
-      <p>
-        J’accompagne les dirigeants à structurer leur activité, piloter leurs projets et remettre de
-        la clarté dans leur fonctionnement, pour leur permettre de se recentrer sur l’essentiel.
-      </p>
-    </section>
+  <!-- ============ NOTRE VISION ============ -->
+  <section class="band band--beige-soft" aria-labelledby="vision-heading">
+    <h2 id="vision-heading" class="sr-only">Notre vision</h2>
+    <div class="band__inner marker">
+      <img
+        class="marker__icon"
+        src={`${base}webassets/icons/Pictogrammes-accueil-01.png`}
+        alt="Notre vision"
+        width="260"
+        height="214"
+      />
+      <div class="marker__body">
+        <p>
+          Le manque de temps n’est pas une fatalité. Il est souvent le symptôme
+          d’une organisation qui s’est complexifiée.
+        </p>
+        <p>
+          J’accompagne les dirigeants à structurer leur activité, piloter leurs
+          projets et remettre de la clarté dans leur fonctionnement, pour leur
+          permettre de se recentrer sur l’essentiel.
+        </p>
+      </div>
+    </div>
+  </section>
 
-    <section class="canva-band" aria-labelledby="approche-heading">
-      <div>
-        <h2 id="approche-heading">Un accompagnement qui repose sur une approche hybride.</h2>
-        <ul class="canva-list canva-list--hybrid">
-          <li>Une vision stratégique pour structurer et décider</li>
-          <li>Une implication opérationnelle pour faire avancer concrètement</li>
+  <!-- ============ APPROCHE HYBRIDE ============ -->
+  <section class="band band--beige-soft band--compact" aria-labelledby="approche-heading">
+    <h2 id="approche-heading" class="sr-only">Une approche hybride</h2>
+    <div class="band__inner marker">
+      <img
+        class="marker__icon"
+        src={`${base}webassets/icons/Pictogrammes-accueil-02.png`}
+        alt="Approche hybride"
+        width="260"
+        height="214"
+      />
+      <div class="marker__body">
+        <p>Un accompagnement qui repose sur :</p>
+        <ul class="bullets--tan">
+          <li>Une vision stratégique pour structurer et décider.</li>
+          <li>Une implication opérationnelle pour faire avancer concrètement.</li>
         </ul>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="canva-manifesto" aria-labelledby="manifesto-heading">
+  <!-- ============ BANDEAU MARINE — LES 3 ACCOMPAGNEMENTS ============ -->
+  <section class="band band--navy" aria-label="Les trois accompagnements">
+    <div class="band__inner offers">
+      <a class="offer-tile" href={`${base}offre/#audit`}>
+        <img src={`${base}webassets/brand/sigle-01.png`} alt="" />
+        <h3>Audit<br />&amp; diagnostic</h3>
+      </a>
+      <a class="offer-tile" href={`${base}offre/#accompagnement`}>
+        <img src={`${base}webassets/brand/sigle-02.png`} alt="" />
+        <h3>Accompagnement<br />mensuel</h3>
+      </a>
+      <a class="offer-tile" href={`${base}offre/#missions`}>
+        <img src={`${base}webassets/brand/sigle-03.png`} alt="" />
+        <h3>Missions<br />ponctuelles</h3>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ MANIFESTO ============ -->
+  <section class="band band--paper" aria-labelledby="manifesto-heading">
+    <div class="band__inner">
       <h2 id="manifesto-heading">Manifesto.</h2>
-      <p class="canva-manifesto__claim">
-        Structurer pour avancer | Décider pour développer | Respirer pour durer
+      <p class="manifesto__claim">
+        Structurer pour avancer&nbsp;|&nbsp;Décider pour développer&nbsp;|&nbsp;Respirer pour durer
       </p>
-      <div class="canva-manifesto__grid">
-        <div class="canva-manifesto__portrait">
-          <img src={`${base}webassets/brand/sigle-02.png`} alt="" />
+      <div class="manifesto__grid">
+        <div class="manifesto__portrait">
+          <img src={`${base}webassets/brand/sigle-02.png`} alt="Barbara Aeschbacher" />
         </div>
-        <div class="canva-manifesto__text">
-          <p>” Diriger une entreprise, c’est faire face à une multitude de décisions, souvent seul.</p>
-          <p>C’est porter la vision, gérer l’opérationnel, piloter la croissance... tout en gardant le cap.</p>
-          <p>Mais avec le temps, les priorités s’accumulent.</p>
-          <p>Les projets s’empilent.</p>
-          <p>La communication se fragmente.</p>
-          <p>Et ce qui devait être stratégique devient urgent.</p>
-          <p>Je suis convaincue qu’un dirigeant ne devrait pas passer son temps à éteindre des feux.</p>
-          <p>Il devrait pouvoir penser, décider, et développer.</p>
-          <p>C’est là que AESCHBACHER Conseil intervient.</p>
+        <div class="manifesto__body">
+          <p><span class="quote">“</span></p>
           <p>
-            J’accompagne les dirigeants de TPE et PME dans la structuration de leur activité, le
-            pilotage de leurs projets et la mise en cohérence de leur communication.
+            Diriger une entreprise, c’est faire face à une multitude de décisions,
+            souvent seul. C’est porter la vision, gérer l’opérationnel, piloter la
+            croissance… tout en gardant le cap.
           </p>
-          <p>Mon approche est simple : apporter de la clarté, structurer l’existant, coordonner les actions et sécuriser les décisions.</p>
-          <p>Ni uniquement stratégique.</p>
-          <p>Ni uniquement opérationnelle.</p>
-          <p>Mais les deux, en permanence.</p>
-          <p>Parce qu’une stratégie n’a de valeur que si elle est appliquée. Et que l’opérationnel n’a de sens que s’il sert une vision.</p>
-          <p>”</p>
+          <p>
+            Mais avec le temps, les priorités s’accumulent. Les projets s’empilent.
+            La communication se fragmente. Et ce qui devait être stratégique devient
+            urgent.
+          </p>
+          <p>
+            Je suis convaincue qu’un dirigeant ne devrait pas passer son temps à
+            éteindre des feux. Il devrait pouvoir penser, décider et développer.
+          </p>
+          <p>C’est là que Aeschbacher Conseil intervient.</p>
+          <p>
+            J’accompagne les dirigeants de TPE et PME dans la structuration de leur
+            activité, le pilotage de leurs projets et la mise en cohérence de leur
+            communication.
+          </p>
+          <p>
+            Mon approche est simple : apporter de la clarté, structurer l’existant,
+            coordonner les actions et sécuriser les décisions.
+          </p>
+          <p>
+            Ni uniquement stratégique. Ni uniquement opérationnelle. Mais les deux,
+            en permanence.
+          </p>
+          <p>
+            Parce qu’une stratégie n’a de valeur que si elle est appliquée. Et que
+            l’opérationnel n’a de sens que s’il sert une vision.
+          </p>
+          <p><span class="quote">”</span></p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="canva-section" aria-labelledby="solutions-heading">
+  <!-- ============ SOLUTIONS ============ -->
+  <section class="band band--beige-soft" aria-labelledby="solutions-heading">
+    <div class="band__inner">
       <h2 id="solutions-heading">Solutions.</h2>
-      <div class="canva-links">
-        <a href="#audit">Audit & diagnostic</a>
-        <a href="#accompagnement">Accompagnement mensuel</a>
-        <a href="#missions">Missions ponctuelles</a>
+      <nav class="solutions-links" aria-label="Nos solutions">
+        <a href={`${base}offre/#audit`}>Audit &amp; diagnostic</a>
+        <a href={`${base}offre/#accompagnement`}>Accompagnement mensuel</a>
+        <a href={`${base}offre/#missions`}>Missions ponctuelles</a>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="band band--beige" aria-labelledby="contact-heading">
+    <div class="band__inner contact-grid">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h2 id="contact-heading">Discutons de votre projet</h2>
+        <p>
+          Décrivez votre contexte : je reviens vers vous pour un premier échange
+          et, le cas échéant, une proposition d’accompagnement.
+        </p>
       </div>
-    </section>
-
-    <section id="audit" class="canva-offer" aria-labelledby="audit-heading">
-      <h3 id="audit-heading">Audit & diagnostic.</h3>
-      <p class="canva-offer__subtitle">Prendre du recul et structurer vos priorités</p>
-      <p class="canva-offer__intro">
-        Un temps d’analyse pour faire un état des lieux de votre organisation, de votre communication
-        et de vos projets en cours.
-      </p>
-      <p class="canva-offer__subtitle">Objectifs :</p>
-      <ul class="canva-list canva-list--offers">
-        <li>Clarifier votre situation actuelle</li>
-        <li>Identifier les points de blocage</li>
-        <li>Prioriser vos actions</li>
-        <li>Définir une feuille de route claire</li>
-      </ul>
-      <p class="canva-offer__subtitle">Livrables :</p>
-      <ul class="canva-list canva-list--offers">
-        <li>Diagnostic structuré</li>
-        <li>Recommandations concrètes</li>
-        <li>Plan d’actions priorisé</li>
-      </ul>
-    </section>
-
-    <section id="accompagnement" class="canva-offer" aria-labelledby="accompagnement-heading">
-      <h3 id="accompagnement-heading">Accompagnement mensuel.</h3>
-      <p class="canva-offer__subtitle">Structurer, piloter, avancer</p>
-      <p class="canva-offer__intro">
-        Un accompagnement dans le temps pour vous aider à organiser votre activité, piloter vos
-        projets et sécuriser vos décisions.
-      </p>
-      <p class="canva-offer__subtitle">Interventions possibles :</p>
-      <ul class="canva-list canva-list--offers">
-        <li>Structuration de l’organisation</li>
-        <li>Pilotage de projets</li>
-        <li>Coordination des prestataires</li>
-        <li>Développement d’actions de communication</li>
-        <li>Support administratif structurant</li>
-      </ul>
-      <p class="canva-offer__subtitle">Modalités :</p>
-      <ul class="canva-list canva-list--offers">
-        <li>Forfait mensuel (nombre de jours défini ensemble)</li>
-        <li>Vision long terme</li>
-        <li>Relation de confiance et de proximité</li>
-      </ul>
-    </section>
-
-    <section id="missions" class="canva-offer" aria-labelledby="missions-heading">
-      <h3 id="missions-heading">Missions ponctuelles.</h3>
-      <p class="canva-offer__subtitle">Répondre à un besoin spécifique</p>
-      <p class="canva-offer__intro">
-        Une intervention ciblée sur un enjeu précis, avec un cadrage clair et une exécution
-        maîtrisée.
-      </p>
-      <p class="canva-offer__subtitle">Interventions possibles :</p>
-      <ul class="canva-list canva-list--offers">
-        <li>Lancement de projet</li>
-        <li>Mise en place d’une stratégie de communication</li>
-        <li>Pilotage temporaire</li>
-      </ul>
-    </section>
-
-    <section class="canva-contact" aria-labelledby="contact-heading">
-      <h2 id="contact-heading">Discutons de votre projet</h2>
       <form action="https://formspree.io/f/REMPLACER" method="post">
         <label for="home-prenom">Prénom *</label>
-        <input id="home-prenom" name="prenom" type="text" required />
+        <input id="home-prenom" name="prenom" type="text" required autocomplete="given-name" />
         <label for="home-nom">Nom *</label>
-        <input id="home-nom" name="nom" type="text" required />
+        <input id="home-nom" name="nom" type="text" required autocomplete="family-name" />
         <label for="home-email">Courriel *</label>
-        <input id="home-email" name="email" type="email" required />
-        <label for="home-entreprise">Société</label>
-        <input id="home-entreprise" name="societe" type="text" />
+        <input id="home-email" name="email" type="email" required autocomplete="email" />
+        <label for="home-societe">Société</label>
+        <input id="home-societe" name="societe" type="text" autocomplete="organization" />
         <label for="home-message">Message</label>
-        <textarea id="home-message" name="message"></textarea>
+        <textarea id="home-message" name="message" required></textarea>
+        <input type="hidden" name="_subject" value="Contact — Aeschbacher Conseil" />
+        <button type="submit" class="button">Envoyer</button>
       </form>
-    </section>
-  </div>
+    </div>
+  </section>
 </Layout>

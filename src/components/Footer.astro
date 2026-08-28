@@ -1,10 +1,21 @@
+---
+import { siteBase } from "../lib/base";
+
+const base = siteBase();
+const year = new Date().getFullYear();
+---
+
 <footer class="site-footer">
   <div class="site-footer__inner">
-    <p class="footer-brand">AESCHBACHER<br />Conseil</p>
+    <a class="site-footer__brand" href={base}>
+      <img src={`${base}webassets/brand/sigle-04.png`} alt="" width="34" height="34" />
+      Aeschbacher Conseil
+    </a>
     <nav class="footer-links" aria-label="Liens légaux">
-      <a href="#">Mentions légales</a>
-      <a href="#">Conditions générales de vente</a>
-      <a href="#">Politique de confidentialité et RGPD</a>
+      <a href={`${base}mentions-legales/`}>Mentions légales</a>
+      <a href={`${base}cgv/`}>Conditions générales de vente</a>
+      <a href={`${base}confidentialite/`}>Politique de confidentialité et RGPD</a>
     </nav>
+    <p class="site-footer__legal">© {year} Aeschbacher Conseil — Tous droits réservés.</p>
   </div>
 </footer>

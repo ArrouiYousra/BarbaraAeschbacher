@@ -10,6 +10,5 @@ import { defineConfig } from "astro/config";
 export default defineConfig({
   site: "https://example.github.io",
   base: "/BarbaraAeschbacher",
-  publicDir: "./supports",
   trailingSlash: "ignore",
 });

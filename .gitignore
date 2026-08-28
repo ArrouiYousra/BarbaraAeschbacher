@@ -5,4 +5,6 @@ dist/
 *.log
 .env
 .env.*
-BarbaraAeschbacher/supports/*
+
+# Dossier de référence client (chartes, PDF, tarifs) — local uniquement, jamais déployé
+supports/
